@@ -1,7 +1,7 @@
 local mymodule = {}
 
 function mymodule.foo()
-    print("Hello World!")
+    return "Hello World!"
 end
 
 return mymodule
