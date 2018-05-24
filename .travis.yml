@@ -24,4 +24,5 @@ script:
   - busted --verbose --coverage
 
 after_success:
-  - luacov-coveralls -e $TRAVIS_BUILD_DIR/lua_install
+  - EXCLUDE_DIR=`echo $TRAVIS_BUILD_DIR/lua_install | sed 's/-/%-/g'`
+  - luacov-coveralls --exclude $EXCLUDE_DIR
